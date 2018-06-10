@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -9,6 +10,7 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
+
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/UserAuthentication');
@@ -67,6 +69,10 @@ app.use(function (req, res, next) {
 });
 app.use('/', routes);
 app.use('/users', users);
+
+
+
+
 
 // Set Port
 app.set('port', (process.env.PORT || 3000));

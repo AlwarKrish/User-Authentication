@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LoginApp</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+
+    <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-6"><center>Hello</center></h1>
+      <h1 class="display-3"><p><center>Your profile<center></p></h1>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+
+
+    <div class="header clearfix">
+       <nav>
+         <ul class="nav nav-pills pull-right">
+           {{#if user}}
+             <li role="presentation"><a href="/">Dashboard</a></li>
+             <li role="presentation"><a href="/users/logout">Logout</a></li>
+           {{else}}
+             <li role="presentation"><a href="/users/login">Login</a></li>
+             <li role="presentation"><a href="/users/register">Register</a></li>
+           {{/if}}
+         </ul>
+       </nav>
+        {{{body}}}
+      </div>
+      </div>
+
+
+    <footer class="footer">
+      <p><center>&copy; 2017 Waioz, Inc.</center></p>
+    </footer>
+
+
+    <hr>
+
+   <!-- /container -->
+  </body>
+</html>
